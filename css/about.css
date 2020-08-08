@@ -17,7 +17,7 @@
 
 .col-sm-7{
    border-radius: 10%;
-   background: linear-gradient(rgb(255, 255, 255),rgba(47, 80, 63, 0));
+   background: rgba(230, 230, 230, 0.6);
 }
 
 .col-sm-7 p{
