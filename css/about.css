@@ -1,0 +1,37 @@
+#About{
+    width:100%;
+    height: 100vh;
+    background: linear-gradient(rgba(53, 82, 66, .5),
+    rgba(47, 80, 63, .6)), url(/img/beach.jpg) center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.col-sm-7{
+   border-radius: 10%;
+   background: linear-gradient(rgb(255, 255, 255),rgba(47, 80, 63, 0));
+}
+
+.col-sm-7 p{
+    font-size:1.5em;
+ }
+
+.col-sm-7 h1{
+    font-size:3em;
+ }
+ 
+.img-warp{
+    width:100%;
+}
+
+.img-warp img{
+    width:100%;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #999999;
+}
