@@ -1,7 +1,17 @@
+<?php
+
+session_start();
+ 
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>My Website!</title>
+    <title>My Website!</title>
         
         <!--meta-->
         <meta charset="UTF-8">
@@ -23,11 +33,14 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:300.400.500">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
     </head>
 
     <body>
-        <!--Landing part-->
-        <div class="landing">
+         <!--Landing part-->
+         <div class="landing">
+         <a href="server/logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+         <a href="reset-password.php" class="btn btn-warning" style="float:right;">Reset Your Password</a>
             <div class="banner">
                 <h1>My <span>Website</span></h1>
                 <p>Dolev's Website</p>
@@ -50,7 +63,7 @@
                     
                     <div class="col-sm-5">
                         <div class="img-warp">
-                            <img src="img/profile.jpg">
+                            <img src="css/img/profile.jpg">
                         </div>
                     </div>
                 </div>
@@ -59,9 +72,20 @@
 
         <!--Subscribe page-->
         <div id="Subscribe">
+            <div class="title">
+            <h1><u><span>SUBSCRIBE</span> NOW!</u></h1>    
 
+            </div>
 
+            <div class="bg">
+                <div class="bg-sub">
+                    <script src="https://apis.google.com/js/platform.js"></script>
+
+                    <div class="g-ytsubscribe" data-channelid="UCa2ftP6k2WycDUwSd8ZHf8Q" data-layout="full" data-theme="dark" data-count="default"></div>   
+                </div>
+            </div>
         </div>
+
 
 
         <!--scroll top button-->
